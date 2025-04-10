@@ -1,0 +1,130 @@
+body {
+    background-color: #000;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 380px;
+    padding: 30px 25px;
+    border-radius: 20px;
+    background-color: #1a1a1a;
+    color: #fff;
+    border: 1px solid #333;
+    box-sizing: border-box;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -1px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    color: #00bfff;
+    margin-bottom: 10px;
+  }
+  
+  .title::before,
+  .title::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: #00bfff;
+    width: 16px;
+    height: 16px;
+    left: 0px;
+  }
+  
+  .title::after {
+    animation: pulse 1s linear infinite;
+  }
+  
+  .message,
+  .signin {
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .signin {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  .signin a {
+    color: #00bfff;
+  }
+  
+  .signin a:hover {
+    text-decoration: underline royalblue;
+  }
+  
+  .flex {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form label {
+    position: relative;
+    width: 100%;
+  }
+  .form label .input {
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    padding: 20px 10px 6px 10px;
+    border: 1px solid rgba(105, 105, 105, 0.5);
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box;
+  }
+  .form label .input + span {
+    color: rgba(255, 255, 255, 0.5);
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    font-size: 0.9em;
+    transition: 0.3s ease;
+    pointer-events: none;
+  }
+  .form label .input:focus + span,
+  .form label .input:valid + span {
+    top: 4px;
+    font-size: 0.7em;
+    color: #00bfff;
+    font-weight: 600;
+  }
+  .submit {
+    border: none;
+    outline: none;
+    padding: 12px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #00bfff;
+    transition: background 0.3s ease;
+    cursor: pointer;
+  }
+  .submit:hover {
+    background-color: #00bfff96;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+  
